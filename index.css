@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(234, 192, 255);
+  position: relative;
+  top: 0;
+  margin-bottom: 145px;
+  height: 30px;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+.logo h4 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: large;
+}
+body {
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  padding-top: 5rem;
+  width: 280px;
+
+  background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Times New Roman', Times, serif;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 50px auto;
+  overflow: hidden;
+  align-items: center;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: cover;
+  margin: -150px 0 40px;
+  position: relative;
+  color: rgb(230, 228, 137);
+  font-family: 'Pacifico', cursive;
+  font-size: 21px;
+}
+
+.countdown {
+  display: flex;
+  transform: scale(1);
+  position: relative;
+  justify-content: space-evenly;
+  font-family: 'Luxurious Script', cursive;
+  font-size: 28px;
+}
+h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px dashed transparent;
+  width: 0%;
+  height: 0%;
+  border-left: 3px dashed transparent;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  padding: px;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 3px dashed transparent;
+  width: 0;
+  height: 0;
+  border-right: 3px dashed transparent;
+  padding: px;
+
+  box-sizing: border-box;
+  transition: all 1s ease;
+}
+h1:hover::after,
+h1:hover::before {
+  border-color: red;
+  width: 100%;
+  height: 100%;
+  background: rgba(red, green, blue, 0.5);
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+time h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  margin: 0 0 5px;
+}
+@media (max-width: 500px) {
+}
+
+svg {
+  position: static;
+  margin-top: -150px;
+
+  width: 250px;
+  height: 300px;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* h1 */
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/* tutup h1 */
+
+/* responsive breakpoint */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(7, 6, 7);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* ! transform */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle span:nth-child() {
+  opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: translate(50px);
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    right: 0;
+    height: 84.5vh;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-evenly;
+    margin-top: 750px;
+    width: 30%;
+    z-index: 1;
+    background-color: rgb(234, 192, 255);
+    padding: 70px;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+}
+
+nav ul.slide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.button {
+  margin-top: 5px;
+}
+.blue {
+  background: linear-gradient(#00a7ff, #e890f0);
+}
+.kotak {
+  width: 50px;
+  height: 20px;
+  margin: 10px auto;
+}
+.merah {
+  background-color: red;
+}
+.hijau {
+  background-color: green;
+}
+.biru {
+  background-color: blue;
+}
+
+footer {
+  width: 100%;
+  font-family: 'PACIVICO', cursive;
+  margin-bottom: 10px;
+}
