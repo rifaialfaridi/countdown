@@ -192,7 +192,7 @@ svg {
   opacity: 0;
   transform: translate(50px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 9999999px) {
   nav ul {
     position: absolute;
     right: 0;
